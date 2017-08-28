@@ -62,9 +62,6 @@ class Form
 	{
 		//	Save changed token value.
 		$this->_sesssion['token'] = $this->_form['token']['value'];
-
-		//	Save cookie.
-		Cookie::Set($this->_form['name'], $this->_cookie);
 	}
 
 	/** Uniqueness
@@ -168,6 +165,9 @@ class Form
 					$this->_cookie[$name] = ifset($input['cookie']) ? $value: null;
 				}
 			}
+
+			//	Save cookie.
+			Cookie::Set($this->_form['name'], $this->_cookie);
 		}
 
 		//	...
@@ -297,7 +297,7 @@ class Form
 
 			//	...
 			if(!$value = ifset($request[$name], ifset($this->_sesssion[$this->_form['name']][$name]))){
-				$value = Cookie::Get($name);
+				$value = $this->_cookie[$name];
 			}
 
 			//	...
