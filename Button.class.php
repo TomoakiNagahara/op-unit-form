@@ -40,6 +40,7 @@ class Button
 	 */
 	static function Build($input)
 	{
+		/*
 		//	...
 		$values = [];
 
@@ -55,6 +56,10 @@ class Button
 			$input['value'] = $values['value'];
 			$result .= Input::Build($input);
 		}
+		*/
+
+		//	...
+		$result = Input::Build($input);
 
 		//	...
 		return $result;
