@@ -64,8 +64,11 @@ class Input
 		}
 
 		//	...
-		if( $type === 'textarea' or $type === 'button' ){
+		if( $type === 'textarea' ){
 			return sprintf('<%s name="%s" %s>%s</%s>', $type, $name, join(' ', $attr), $value, $type);
+		}else if( $type === 'button' ){
+			$label = empty($input['label']) ? $value: $input['label'];
+			return sprintf('<%s name="%s" value="%s" %s>%s</%s>', $type, $name, $value, join(' ', $attr), $label, $type);
 		}else{
 			return sprintf('<input type="%s" name="%s" value="%s" %s />', $type, $name, $value, join(' ', $attr));
 		}
