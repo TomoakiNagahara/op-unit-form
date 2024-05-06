@@ -244,7 +244,7 @@ class Form implements IF_FORM, IF_UNIT
 
 		//	Why necessary this routine?
 		if( $name === null ){
-			$names = array_keys($this->_form['input']);
+			$names = isset($this->_form['input']) ? array_keys($this->_form['input']): [];
 		}else{
 			$names[] = $name;
 		};
