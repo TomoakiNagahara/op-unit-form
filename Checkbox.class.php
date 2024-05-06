@@ -31,7 +31,7 @@ namespace OP\UNIT\FORM;
 class Checkbox
 {
 	//	...
-	use \OP\OP_CORE;
+	use \OP\OP_CORE, \OP\OP_CI;
 
 	/**
 	 * Build input tag as type of checkbox.
