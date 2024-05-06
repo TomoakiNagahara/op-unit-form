@@ -29,6 +29,7 @@ namespace OP\UNIT;
  *
  */
 use Exception;
+use OP\OP_CI;
 use OP\OP_CORE;
 use OP\OP_UNIT;
 use OP\OP_SESSION;
@@ -52,7 +53,7 @@ class Form implements IF_FORM, IF_UNIT
 	/** Trait
 	 *
 	 */
-	use OP_CORE, OP_UNIT, OP_SESSION;
+	use OP_CORE, OP_UNIT, OP_SESSION, OP_CI;
 
 	/** Form configuration.
 	 *
