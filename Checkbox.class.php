@@ -54,6 +54,23 @@ class Checkbox
 		$name = $input['name'];
 
 		//	...
+		if( empty($input['value']) ){
+		}else if( is_string($input['value']) ){
+			$default_value = explode(',', $input['value']);
+		}else if( is_array($input['value']) ){
+			$default_value = $input['value'];
+		}else{
+			OP()->Notice("Checkbox value is not array. ({$input['name']})");
+			return;
+		}
+
+		//	...
+		if( empty($input['option']) ){
+			OP()->Notice("Checkbox option is empty. ({$input['name']})");
+			return;
+		}
+
+		//	...
 		printf('<input type="hidden" name="%s[0]" value="" />', $name);
 
 		//	...
@@ -62,11 +79,11 @@ class Checkbox
 			//	...
 			$label = $option['label'];
 			$value = $option['value'];
-			$check = $option['check'];
+			$check = $option['check'] ?? null;
 
 			//	...
-			if( $input['value'] ?? null ){
-				$check = array_search($value, $input['value']);
+			if( $default_value ?? null ){
+				$check = (array_search($value, $default_value) !== false);
 			}
 
 			//	...
