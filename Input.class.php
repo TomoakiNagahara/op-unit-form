@@ -31,7 +31,7 @@ namespace OP\UNIT\FORM;
 class Input
 {
 	//	...
-	use \OP\OP_CORE;
+	use \OP\OP_CORE, \OP\OP_CI;
 
 	/**
 	 * Build input tag.
