@@ -79,9 +79,10 @@ $input = [];
 $input['name']   = 'checkbox';
 $input['type']   = 'checkbox';
 $input['label']  = 'Choose OS';
+$input['value'] = 'mac,win,unix';
 $input['option'] = [
   ['label' => 'Mac', 'value' => 'mac'],
-  ['label' => 'Win', 'value' => 'win', 'checked' => true],
+  ['label' => 'Win', 'value' => 'win'],
   ['label' => 'Unix','value' => 'unix'],
 ];
 $form['input'][] = $input;
