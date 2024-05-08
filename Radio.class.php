@@ -42,6 +42,22 @@ class Radio
 	static function Build($input)
 	{
 		//	...
+		if( empty($input['option']) ){
+			OP()->Notice("This input is empty option. ({$input['name']})");
+			return;
+		}
+
+		//	...
+		if( isset($input['value']) ){
+			//	...
+			if( is_string($input['value']) ){
+				$default_value = (string)$input['value'];
+			}else{
+				OP()->Notice("This input value is not string. ({$input['name']})");
+			}
+		}
+
+		//	...
 		$attr = [];
 
 		//	...
@@ -57,17 +73,21 @@ class Radio
 		//	...
 		foreach($input['option'] as $option){
 			//	...
-			$label = $option['label'];
 			$value = $option['value'];
-			$check = $option['check'] ?? null;
+			$label = $option['label'] ?? $value;
 
-			//	Overwrite checked.
-			if(($check !== null) and isset($input['value']) ){
-				$check = ((string)$input['value'] === (string)$value) ? true: false;
+			//	...
+			if(!is_string($value) ){
+				OP()->Notice("This option value is not string. ({$input['name']}, {$label})");
 			}
 
 			//	...
-			$checked = $check ? 'checked="checked"':'';
+			if( isset($option['check']) ){
+				OP()->Notice("Default check value is set to input['value']. ({$input['name']})");
+			}
+
+			//	...
+			$checked = (isset($default_value) and $default_value === (string)$value) ? 'checked="checked"':'';
 
 			//	...
 			printf('<label><input type="radio" name="%s" value="%s" %s %s />%s</label>', $name, $value, join(' ', $attr), $checked, $label);
