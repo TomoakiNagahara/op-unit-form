@@ -77,17 +77,16 @@ class Checkbox
 		$i = 1;
 		foreach($input['option'] as $option){
 			//	...
-			$label = $option['label'];
 			$value = $option['value'];
-			$check = $option['check'] ?? null;
+			$label = $option['label'] ?? $value;
 
 			//	...
-			if( $default_value ?? null ){
-				$check = (array_search($value, $default_value) !== false);
+			if( isset($option['check']) ){
+				OP()->Notice("Default checked is set to input['value']. ({$input['name']})");
 			}
 
 			//	...
-			$checked = $check ? 'checked="checked"':'';
+			$checked = (isset($default_value) and array_search($value, $default_value) !== false) ? 'checked="checked"':'';
 
 			//	...
 			printf('<label><input type="checkbox" name="%s[%s]" value="%s" %s %s />%s</label>', $name, $i, $value, join(' ', $attr), $checked, $label);
