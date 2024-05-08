@@ -39,10 +39,12 @@ if( $input_name ){
 	}
 
 	//	...
+	if(!Env::isShell() ){
 	if( $input['cookie'] ?? null ){
 		$cookie = Cookie::Get($this->_form['name']);
 		unset($cookie[$input_name]);
 		Cookie::Set($this->_form['name'], $cookie);
+	}
 	}
 	$this->_session[$input_name] = null;
 	$input['value'] = $input['original'] ?? null;
@@ -59,7 +61,9 @@ $this->_session['token'] = $token;
 $this->Session($this->_form['name'], $this->_session);
 
 //	...
+if(!Env::isShell() ){
 Cookie::Set($this->_form['name'], []);
+}
 
 //	...
 $this->_request = null;
