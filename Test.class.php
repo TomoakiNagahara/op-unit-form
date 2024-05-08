@@ -121,6 +121,12 @@ class Test
 		$failed = false;
 
 		//	...
+		if( empty($input['name']) ){
+			self::Error("Input name is empty.");
+			return false;
+		}
+
+		//	...
 		foreach(['type'] as $key){
 			if(!isset($input[$key])){
 				self::Error("Input config has not been set $key attribute. ({$input['name']})");
