@@ -612,10 +612,12 @@ class Form implements IF_FORM, IF_UNIT
 		}
 
 		//	Cookie
+		if(!Env::isShell() ){
 		$form_name = $this->_form['name'];
 		$cookie = Cookie::Get($form_name, null);
 		unset($cookie[$name]);
 		Cookie::Set($form_name, $cookie);
+		}
 	}
 
 	/** Get value of input.
