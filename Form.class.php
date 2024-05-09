@@ -939,6 +939,7 @@ class Form implements IF_FORM, IF_UNIT
 	 * @deprecated 2020-08-25
 	 * @param  string  $topic
 	 */
+	/*
 	private function _PreDebug($topic=null)
 	{
 		//	...
@@ -950,6 +951,7 @@ class Form implements IF_FORM, IF_UNIT
 		$this->_debug['session'] = $this->_session[$topic]       ?? $this->_session;
 		$this->_debug['cookie']  = Cookie::Get($form_name, null);
 	}
+	*/
 
 	/** Display table layout.
 	 *
