@@ -76,7 +76,7 @@ $result = '<input type="hidden" name="checkbox_name[0]" value="" /><label><input
 $args   =  [$input];
 $ci->Set($method, $result, $args);
 
-//	$option['check'] is checked test
+//	$option['check'] is error test
 $input  = [
 	'type'  => 'checkbox',
 	'name'  => $checkbox_name,
@@ -84,27 +84,11 @@ $input  = [
 	'option'=> [
 		0 => ['label' => 'A', 'value' => 'a', 'check' => '1'],
 		1 => ['label' => 'B', 'value' => 'b'],
-		2 => ['label' => 'C', 'value' => 'c', 'check' => true],
+		2 => ['label' => 'C', 'value' => 'c'],
 	],
 ];
 $method = 'Build';
-$result = '<input type="hidden" name="checkbox_name[0]" value="" /><label><input type="checkbox" name="checkbox_name[1]" value="a"  checked="checked" />A</label><label><input type="checkbox" name="checkbox_name[2]" value="b"   />B</label><label><input type="checkbox" name="checkbox_name[3]" value="c"  checked="checked" />C</label>';
-$args   =  [$input];
-$ci->Set($method, $result, $args);
-
-//	$option['check'] is checked test
-$input  = [
-	'type'  => 'checkbox',
-	'name'  => $checkbox_name,
-	'label' => 'Checkbox',
-	'option'=> [
-		0 => ['label' => 'A', 'value' => 'a', 'check' => '0'],
-		1 => ['label' => 'B', 'value' => 'b', 'check' =>  0 ],
-		2 => ['label' => 'C', 'value' => 'c', 'check' => false],
-	],
-];
-$method = 'Build';
-$result = '<input type="hidden" name="checkbox_name[0]" value="" /><label><input type="checkbox" name="checkbox_name[1]" value="a"   />A</label><label><input type="checkbox" name="checkbox_name[2]" value="b"   />B</label><label><input type="checkbox" name="checkbox_name[3]" value="c"   />C</label>';
+$result = 'Notice: Default checked is set to input[\'value\']. (checkbox_name)';
 $args   =  [$input];
 $ci->Set($method, $result, $args);
 
