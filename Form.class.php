@@ -525,6 +525,12 @@ class Form implements IF_FORM, IF_UNIT
 	 */
 	function Label($name)
 	{
+		//	If type is button, not display label.
+		if( $this->_form['input'][$name]['type'] === 'button' ){
+			return;
+		}
+
+		//	...
 		echo ucfirst($this->GetLabel($name));
 	}
 
