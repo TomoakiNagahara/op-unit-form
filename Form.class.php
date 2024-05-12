@@ -433,7 +433,7 @@ class Form implements IF_FORM, IF_UNIT
 			//	Regenerate new token.
 		//	$this->_session['token'] = Hasha1(microtime());
 		//	$this->_session['token'] = random_int(1000, 9999);
-			$this->_session['token'] = (Env::AppID() === _OP_APP_ID_CI_) ? 'CI': random_int(10000, 99999);
+			$this->_session['token'] = Env::isCI() ? 'CI': random_int(10000, 99999);
 
 			//	Confirmation of request token.
 			if( $token ){
