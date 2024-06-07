@@ -883,6 +883,7 @@ class Form implements IF_FORM, IF_UNIT
 	{
 		//	If token is not valid, not work validate.
 		if(!self::Token() ){
+			$this->_validate = false;
 			return null;
 		}
 
