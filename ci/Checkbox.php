@@ -76,6 +76,7 @@ $result = '<input type="hidden" name="checkbox_name[0]" value="" /><label><input
 $args   =  [$input];
 $ci->Set($method, $result, $args);
 
+/*
 //	$option['check'] is error test
 $input  = [
 	'type'  => 'checkbox',
@@ -91,6 +92,7 @@ $method = 'Build';
 $result = 'Notice: Default checked is set to input[\'value\']. (checkbox_name)';
 $args   =  [$input];
 $ci->Set($method, $result, $args);
+*/
 
 //	...
 return $ci->Get();

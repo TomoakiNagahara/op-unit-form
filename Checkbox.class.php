@@ -80,10 +80,12 @@ class Checkbox
 			$value = $option['value'];
 			$label = $option['label'] ?? $value;
 
+			/*
 			//	...
 			if( isset($option['check']) ){
 				OP()->Notice("Default checked is set to input['value']. ({$input['name']})");
 			}
+			*/
 
 			//	...
 			$checked = (isset($default_value) and array_search($value, $default_value) !== false) ? 'checked="checked"':'';
