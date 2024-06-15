@@ -21,9 +21,19 @@ declare(strict_types=1);
 namespace OP\UNIT\FORM;
 
 /* @var  $form  \OP\UNIT\Form */
+
+//	...
+if( $form_name = $_POST['form_name'] ?? null ){
+	if( $form_name === 'clear' ){
+		$form->Clear();
+	}
+}
+
+//	...
 $validate = $form->Validate();
 $validate['isValidate'] = $form->isValidate();
 $validate['token']      = $form->Token();
+
 ?>
 <section class="breadcrumb-navigation">
 [
@@ -45,6 +55,12 @@ $validate['token']      = $form->Token();
 		<?php endforeach; ?>
 	</table>
 	<?php $form->Finish() ?>
+
+	<!-- Clear form -->
+	<form name="clear" method="POST">
+		<input type="hidden" name="form_name" value="clear" />
+		<button> Clear </button>
+	</form>
 </section>
 <style>
 #op-unit-form th,
