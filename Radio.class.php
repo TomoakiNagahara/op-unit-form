@@ -81,10 +81,12 @@ class Radio
 				OP()->Notice("This option value is not string. ({$input['name']}, {$label})");
 			}
 
+			/*
 			//	...
 			if( isset($option['check']) ){
 				OP()->Notice("Default check value is set to input['value']. ({$input['name']})");
 			}
+			*/
 
 			//	...
 			$checked = (isset($default_value) and $default_value === (string)$value) ? 'checked="checked"':'';
