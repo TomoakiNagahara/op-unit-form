@@ -424,6 +424,14 @@ class Form implements IF_FORM, IF_UNIT
 	{
 		//	...
 		if(!isset($this->_is_token) ){
+			//	For developers message.
+			if(!isset($this->_session['token']) and OP()->Env()->isAdmin() ){
+				//	CI
+				if(!OP()->Env()->isCI() ){
+					D("Session has expired.");
+				}
+			}
+
 			//	Initialize.
 			$this->_is_token = null;
 
