@@ -1,0 +1,39 @@
+<?php
+/** op-unit-form:/template/display.phtml
+ *
+ * @created    2024-06-13
+ * @version    1.0
+ * @package    op-unit-form
+ * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright  Tomoaki Nagahara All right reserved.
+ */
+
+/** Declare strict
+ *
+ */
+declare(strict_types=1);
+
+/** namespace
+ *
+ */
+namespace OP\UNIT\FORM;
+
+/* @var $form \OP\UNIT\Form */
+$name = 'button';
+
+?>
+<?php $form->Start() ?>
+<table>
+	<?php foreach( $form->Values() as $name => $value ): ?>
+	<tr>
+		<td><?php $form->Label($name) ?></td>
+		<td><?php $form->Input($name) ?></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><?php $form->Error($name) ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+<?php $value ?>
+<?php $form->Finish() ?>
