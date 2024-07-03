@@ -174,4 +174,10 @@ $args   = $form_name;
 $ci->Set($method, $result, $args);
 
 //	...
+$method = 'Display';
+$result = 'Notice: Form has already started. (form_ci)';
+$args   = $form_name;
+$ci->Set($method, $result, $args);
+
+//	...
 return $ci->Get();

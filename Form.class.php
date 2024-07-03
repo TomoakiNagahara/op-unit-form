@@ -988,4 +988,12 @@ class Form implements IF_FORM, IF_UNIT
 		include(__DIR__.'/include/toString.php');
 		return ob_get_clean();
 	}
+
+	/**
+	 *
+	 */
+	function Display()
+	{
+		self::Template('display.phtml',['form'=>$this]);
+	}
 }
