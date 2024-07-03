@@ -180,4 +180,49 @@ $args   = $form_name;
 $ci->Set($method, $result, $args);
 
 //	...
+$method = 'Debug';
+$result = 'unit:/form/Form.class.php #1015 - [
+  0 => "Does not match token."
+]
+';
+$args   = $form_name;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = '_InitRequest';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = '_InitOption';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = 'GetLabel';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = 'GetValue';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = 'Validate';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
+$method = 'isValidate';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
 return $ci->Get();
