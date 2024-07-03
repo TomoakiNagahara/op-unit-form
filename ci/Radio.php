@@ -46,7 +46,7 @@ $input['option'] = [
 ];
 $method = 'Build';
 $args   = [$input];
-$result = '<label><input type="radio" name="input_radio" value="a"   />A</label><label><input type="radio" name="input_radio" value="b"   />B</label><label><input type="radio" name="input_radio" value="c"   />C</label>';
+$result = '<label><input type="radio" name="input_radio" value="a"   /><span>A</span></label><label><input type="radio" name="input_radio" value="b"   /><span>B</span></label><label><input type="radio" name="input_radio" value="c"   /><span>C</span></label>';
 $ci->Set($method, $result, $args);
 
 //	Default value array error
@@ -60,7 +60,7 @@ $ci->Set($method, $result, $args);
 $input['value'] = 'b';
 $method = 'Build';
 $args   = [$input];
-$result = '<label><input type="radio" name="input_radio" value="a"   />A</label><label><input type="radio" name="input_radio" value="b"  checked="checked" />B</label><label><input type="radio" name="input_radio" value="c"   />C</label>';
+$result = '<label><input type="radio" name="input_radio" value="a"   /><span>A</span></label><label><input type="radio" name="input_radio" value="b"  checked="checked" /><span>B</span></label><label><input type="radio" name="input_radio" value="c"   /><span>C</span></label>';
 $ci->Set($method, $result, $args);
 
 //	...
