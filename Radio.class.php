@@ -92,7 +92,7 @@ class Radio
 			$checked = (isset($default_value) and $default_value === (string)$value) ? 'checked="checked"':'';
 
 			//	...
-			printf('<label><input type="radio" name="%s" value="%s" %s %s />%s</label>', $name, $value, join(' ', $attr), $checked, $label);
+			printf('<label><input type="radio" name="%s" value="%s" %s %s /><span>%s</span></label>', $name, $value, join(' ', $attr), $checked, $label);
 		}
 	}
 }
