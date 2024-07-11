@@ -47,8 +47,15 @@ $form['input'][] = [
 //	Set form config.
 $unit_form->Config($form);
 
-//	Do varidation
-$unit_form->Validate();
+//	Do validation.
+D( $unit_form->isValidate() );
 
 //	...
-echo $unit_form;
+$unit_form->Start('form_name');
+$unit_form->Label('text');
+$unit_form->Input('text');
+$unit_form->Value('text');
+$unit_form->Error('text');
+$unit_form->Input('button');
+$unit_form->Finish('form_name');
+$unit_form->Debug();
