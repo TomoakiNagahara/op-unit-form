@@ -220,7 +220,7 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'isValidate';
-$result =  null;
+$result =  false;
 $args   =  null;
 $ci->Set($method, $result, $args);
 

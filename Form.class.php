@@ -922,12 +922,12 @@ class Form implements IF_FORM, IF_UNIT
 	 * @see \OP\IF_FORM::isValidate()
 	 * @return null|boolean
 	 */
-	function isValidate()
+	function isValidate() : bool
 	{
 		//	...
 		if(!$this->Token() ){
 			$this->_validate = [];
-			return null;
+			return false;
 		};
 
 		//	...
