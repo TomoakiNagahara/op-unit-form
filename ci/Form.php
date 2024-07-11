@@ -181,7 +181,7 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'Debug';
-$result = 'unit:/form/Form.class.php #1015 - [
+$result = 'unit:/form/Form.class.php #1018 - [
   0 => "Does not match token."
 ]
 ';
