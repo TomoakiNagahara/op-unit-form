@@ -600,9 +600,10 @@ class Form implements IF_FORM, IF_UNIT
 		//	...
 		if( $input ){
 			$this->SetInput($name, $input);
-		}else{
-			echo $this->GetInput($name);
 		};
+
+		//	...
+		echo $this->GetInput($name);
 	}
 
 	/** Set input value.
