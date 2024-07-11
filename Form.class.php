@@ -820,13 +820,15 @@ class Form implements IF_FORM, IF_UNIT
 	 *
 	 * @param	 array	 $input
 	 */
-	function SetInput($input)
+	function SetInput(string $name, array $input)
 	{
+		/*
 		//	...
 		if(!$name = $input['name'] ?? null ){
 			Notice::Set("Has not been set input name.");
 			return;
 		}
+		*/
 
 		//	Overwrite existing settings if there is one.
 		foreach( $input as $key => $val ){

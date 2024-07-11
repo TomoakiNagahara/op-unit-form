@@ -151,8 +151,8 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'SetInput';
-$result = 'Notice: Has not been set input name.';
-$args   =  null;
+$result =  null;
+$args   = [$input_name, ['value'=>'touch']];
 $ci->Set($method, $result, $args);
 
 //	...
