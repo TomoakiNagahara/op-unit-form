@@ -844,7 +844,7 @@ class Form implements IF_FORM, IF_UNIT
 	 * @param	 string	 $name
 	 * @param	 array	 $option
 	 */
-	function SetOption($input_name, $option)
+	function SetOption(string $input_name, array $option)
 	{
 		//	...
 		if( empty($this->_form['input'][$input_name]) ){
