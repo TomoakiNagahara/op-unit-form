@@ -983,7 +983,7 @@ class Form implements IF_FORM, IF_UNIT
 	{
 		//	This logic so not work singleton.
 		if( _OP_APP_BRANCH_ > 2023 ){
-			OP()->Notice('__toString is deprecated. Automatically display form is use self::Display("form_name")');
+			D('__toString is deprecated. Automatically display form is use self::Display("form_name")');
 		}
 
 		//	...
