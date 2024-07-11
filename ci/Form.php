@@ -157,8 +157,8 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'SetOption';
-$result = 'Notice: Has not been set this input. ()';
-$args   = ['',''];
+$result =  null;
+$args   = [$input_name, ['option']];
 $ci->Set($method, $result, $args);
 
 //	...
