@@ -139,7 +139,7 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'Error';
-$result = 'Notice: Form::Validate() is not execute.';
+$result =  null;
 $args   =  null;
 $ci->Set($method, $result, $args);
 
