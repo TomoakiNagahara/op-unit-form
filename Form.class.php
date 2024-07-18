@@ -831,7 +831,9 @@ class Form implements IF_FORM, IF_UNIT
 		}
 
 		//	...
+		/* Need this?
 		$this->_InitInput($name);
+		*/
 	}
 
 	/** Set input config.
