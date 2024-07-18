@@ -783,8 +783,11 @@ class Form implements IF_FORM, IF_UNIT
 
 		//	...
 		if(!isset($this->_validate) ){
+			/*
 			\OP\Notice("Form::Validate() is not execute.");
 			return;
+			*/
+			$this->Validate();
 		}
 
 		//	...
