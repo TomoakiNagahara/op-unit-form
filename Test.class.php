@@ -159,7 +159,7 @@ class Test
 	 *
 	 * @param string $error
 	 */
-	static function Error( string $error=null )
+	static function Error( string $error='' )
 	{
 		//	...
 		static $_error = [];
