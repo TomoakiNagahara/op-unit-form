@@ -141,6 +141,17 @@ class Test
 		};
 
 		//	...
+		switch( $input['type'] ){
+			case 'submit':
+			case 'button':
+				if( empty( strlen($input['value'] ?? '') ) ){
+					self::Error("Please assign a value to the button: type={$input['type']}, name={$input['name']}");
+					$failed = true;
+				}
+				break;
+		}
+
+		//	...
 		return !$failed;
 	}
 
