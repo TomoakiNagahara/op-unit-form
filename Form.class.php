@@ -397,7 +397,9 @@ class Form implements IF_FORM, IF_UNIT
 				//	...
 				if( Env::isAdmin() ){
 					if(!FORM\Test::Config($this->_form) ){
-						D( FORM\Test::Error() );
+						foreach( FORM\Test::Error() as $error ){
+							D($error);
+						}
 					}
 				}
 			} catch ( \Throwable $e ){
