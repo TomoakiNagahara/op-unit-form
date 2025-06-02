@@ -136,7 +136,7 @@ class Test
 
 		//	...
 		if( $input['name'] === 'submit' ){
-			self::Error("Avoid to \"submit\" at input name. (type={$input['type']}, name={$input['name']})");
+			self::Error("Please do not use `submit` as the `name` of an `input`: type={$input['type']}, name={$input['name']}");
 			$failed = true;
 		};
 
