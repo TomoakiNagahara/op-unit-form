@@ -127,7 +127,8 @@ class Form implements IF_FORM, IF_UNIT
 		if( is_string($form) ){
 			//	...
 			if(!file_exists($form) ){
-				throw new Exception("Does not found this file. ($form)");
+				$dir = OP()->MetaPath(getcwd());
+				throw new Exception("Does not found this file: current={$dir}, path={$form}");
 			}
 
 			//	...
