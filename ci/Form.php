@@ -47,7 +47,7 @@ $form['input'][$input_name] = $input;
 
 //	...
 $method = '_InitForm';
-$result = 'Exception: Does not found this file. (conf.form.php)';
+$result = 'Exception: Does not found this file: current=unit:/form/, path=conf.form.php';
 $args   = ['conf.form.php'];
 $ci->Set($method, $result, $args);
 
