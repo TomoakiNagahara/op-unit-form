@@ -475,7 +475,7 @@ class Form implements IF_FORM, IF_UNIT
 	 *
 	 * @param array $config
 	 */
-	function Start($config=[])
+	function Start(array $config=[])
 	{
 		//	...
 		if( $this->_is_start ){
