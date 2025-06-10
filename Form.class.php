@@ -326,7 +326,9 @@ class Form implements IF_FORM, IF_UNIT
 
 		//	...
 		if( count($cookie ?? []) ){
+			if(!OP()->Env()->isShell() ){
 			Cookie::Set($form_name, $cookie);
+			}
 		}
 	}
 
