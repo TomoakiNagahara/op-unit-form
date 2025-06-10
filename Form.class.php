@@ -325,7 +325,7 @@ class Form implements IF_FORM, IF_UNIT
 		}
 
 		//	...
-		if( count($cookie) ){
+		if( count($cookie ?? []) ){
 			Cookie::Set($form_name, $cookie);
 		}
 	}
