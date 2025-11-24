@@ -32,6 +32,7 @@ use OP\OP_CI;
 use OP\OP_CORE;
 use OP\OP_UNIT;
 use OP\OP_SESSION;
+use OP\OP_TEMPLATE;
 use OP\IF_UNIT;
 use OP\IF_FORM;
 use OP\Env;
@@ -53,6 +54,7 @@ class Form implements IF_FORM, IF_UNIT
 	 *
 	 */
 	use OP_CORE, OP_UNIT, OP_SESSION, OP_CI;
+	use OP_TEMPLATE;
 
 	/** Form configuration.
 	 *
