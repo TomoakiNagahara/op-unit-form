@@ -17,7 +17,7 @@ namespace OP;
 
 //	...
 if(!$this->_form ){
-	Notice::Set("Has not been set form configuration.");
+	OP()->Error("Has not been set form configuration.");
 	return;
 }
 
@@ -25,7 +25,7 @@ if(!$this->_form ){
 if( $input_name ){
 	//	...
 	if(!isset($this->_form['input'][$input_name]) ){
-		\OP\Notice("This input name does not exists. ($input_name)");
+		OP()->Error("This input name does not exists. ($input_name)");
 		return;
 	}
 
@@ -34,7 +34,7 @@ if( $input_name ){
 
 	//	...
 	if( $input['echo'] ?? null ){
-		\OP\Notice("This input already displayed. ($input_name)");
+		OP()->Error("This input already displayed. ($input_name)");
 		return;
 	}
 
@@ -72,7 +72,7 @@ $this->_request = null;
 foreach( $this->_form['input'] as &$input ){
 	//	...
 	if( $input['echo'] ?? null ){
-		\OP\Notice("This input already displayed. ($input_name)");
+		OP()->Error("This input already displayed. ($input_name)");
 		continue;
 	}
 	/*
