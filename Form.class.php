@@ -158,9 +158,9 @@ class Form implements IF_FORM, IF_UNIT
 		}
 
 		//	...
-		$this->_form = \OP\Encode($form);
+		$this->_form = OP()->Encode($form);
 
-		//	Convert to associative array from numberling array.
+		//	Convert to associative array from number array.
 		if( isset($this->_form['input'][0]) ){
 			//	...
 			$inputs = $this->_form['input'];
