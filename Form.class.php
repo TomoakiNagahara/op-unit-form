@@ -1,5 +1,5 @@
 <?php
-/** op-unit-form:/Form.class.php
+/**	op-unit-form:/Form.class.php
  *
  * v1.0 2007 SecureForm
  * v2.0 2009 onepiece-framework
@@ -7,24 +7,22 @@
  * v3.1 2018 Unit Gen2
  *
  * @created   2017-01-25
- * @version   3.1
  * @package   op-unit-form
- * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
- * @copyright Tomoaki Nagahara All right reserved.
+ * @copyright 2007 Tomoaki Nagahara All Rights Reserved.
  */
 
-/** Declare strict
+/**	Declare strict type
  *
  */
 declare(strict_types=1);
 
-/** namespace
+/**	Namespace
  *
  * @created   2018-01-22
  */
 namespace OP\UNIT;
 
-/** Used class
+/**	Use
  *
  */
 use Exception;
@@ -40,13 +38,10 @@ use OP\Notice;
 use OP\Cookie;
 use function OP\CompressPath;
 
-/** Form
+/**	Form
  *
  * @created   2017-01-25
- * @version   1.0
- * @package   unit-form
- * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
- * @copyright Tomoaki Nagahara All right reserved.
+ * @version   3.1
  */
 class Form implements IF_FORM, IF_UNIT
 {
