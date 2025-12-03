@@ -689,7 +689,7 @@ class Form implements IF_FORM, IF_UNIT
 		$result = [];
 
 		//	Generate result each input name.
-		foreach( $this->Config()['input'] as $name => $input ){
+		foreach( $this->Config()['input'] ?? [] as $name => $input ){
 			//	If not save to session.
 			if( $input['session'] ?? true ){
 				//	Calc value.
