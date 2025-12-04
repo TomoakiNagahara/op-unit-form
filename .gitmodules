@@ -1,3 +1,6 @@
 [submodule "testcases"]
 	path = testcases
 	url = https://github.com/onepiece-framework/op-unit-form-testcase.git
+[submodule "webpack"]
+	path = webpack
+	url = https://github.com/onepiece-framework/op-unit-form-webpack.git
