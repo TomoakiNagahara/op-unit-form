@@ -17,4 +17,9 @@ declare(strict_types=1);
 include(__DIR__.'/autoloader.php');
 
 //	...
+if( OP()->Config('form')['webpack'] ?? null ){
+	OP()->Unit()->WebPack()->Auto('./webpack/');
+}
+
+//	...
 return true;
