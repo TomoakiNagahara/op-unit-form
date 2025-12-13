@@ -21,4 +21,5 @@ namespace OP\UNIT\FORM;
 //	...
 return [
 	'debug' => false,
+	'webpack' => true,
 ];
