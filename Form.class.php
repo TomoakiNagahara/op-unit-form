@@ -173,12 +173,12 @@ class Form implements IF_FORM, IF_UNIT
 
 				//	...
 				if(!$name ){
-					throw new Exception("Has not been set input name.");
+					throw new Exception("The input name is not set: " . serialize($input) );
 				};
 
 				//	...
 				if( $this->_form['input'][$name] ?? null ){
-					throw new Exception("This input name has already set. ($name)");
+					throw new Exception("This input name has already set: {$name}");
 				}
 
 				//	...
