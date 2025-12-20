@@ -181,6 +181,11 @@ class Form implements IF_FORM, IF_UNIT
 					throw new Exception("This input name has already set: {$name}");
 				}
 
+				//	For passwords, the input value is not saved in the session.
+				if( $input['type'] === 'password' ){
+					$input['session'] = false;
+				}
+
 				//	...
 				$this->_form['input'][$name] = $input;
 			};
