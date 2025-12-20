@@ -59,7 +59,7 @@ $ci->Set($method, $result, $args);
 
 //	Duplicate: Already initialized.
 $method = '_InitForm';
-$result = 'Exception: This form config is already initialized. (form name: form_ci)';
+$result = 'Exception: This form is 2014. Multi config functionality has been removed. Ex: OP()->Unit()->Instantiate(\'Form\')';
 $args   = [$form];
 $ci->Set($method, $result, $args);
 
