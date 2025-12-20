@@ -134,7 +134,7 @@ class Form implements IF_FORM, IF_UNIT
 
 		//	...
 		if( $this->_form ){
-			throw new Exception("This form config is already initialized. (form name: {$this->_form['name']})");
+			throw new Exception("This form is 2014. Multi config functionality has been removed. Ex: OP()->Unit()->Instantiate('Form')");
 		}
 
 		//	...
