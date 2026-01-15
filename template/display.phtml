@@ -31,10 +31,12 @@ namespace OP\UNIT\FORM;
 		<td><?php $form->Error($name) ?></td>
 	</tr>
 	<?php endforeach; ?>
+	<?php if( empty($form->Config()['input']['button']) ): ?>
 	<tr>
 		<td></td>
 		<td><button> Submit </button></td>
 	</tr>
+	<?php endif; ?>
 </table>
 <?php $form->Finish() ?>
 <?php
