@@ -78,6 +78,7 @@ class Select
 			$value = $option['value'] ?? $option;
 			$label = $option['label'] ?? $value;
 			$check = $option['check'] ?? null;
+			$disabled = ($option['disabled'] ?? null) ? 'disabled="disabled"' : null;
 
 			//	...
 			if( isset($input['value']) ){
@@ -92,7 +93,7 @@ class Select
 			$selected = $check ? 'selected="selected"':'';
 
 			//	...
-			$options .= sprintf('<option value="%s" %s>%s</option>', $value, $selected, $label);
+			$options .= sprintf('<option value="%s" %s %s>%s</option>', $value, $disabled, $selected, $label);
 		}
 
 		return "$multiple<select $attr>$options</select>";
