@@ -373,7 +373,7 @@ class Form implements IF_FORM, IF_UNIT
 				}
 			}else{
 				$value = $option['value'];
-				$label = $option['label'];
+				$label = $option['label'] ?? $value;
 				$check = $option['check'] ?? $option['checked'] ?? $option['select'] ?? $option['selected'] ?? false;
 			}
 
