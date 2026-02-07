@@ -7,8 +7,9 @@
  * v3.1 2018 Unit Gen2
  *
  * @created   2017-01-25
+ * @license   Apache-2.0
  * @package   op-unit-form
- * @copyright 2007 Tomoaki Nagahara All Rights Reserved.
+ * @copyright Tomoaki Nagahara
  */
 
 /**	Declare strict type
