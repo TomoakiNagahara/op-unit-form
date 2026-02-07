@@ -245,7 +245,7 @@ class Form implements IF_FORM, IF_UNIT
 		$token = $this->Token();
 
 		//	...
-		if(!\OP\Env::isShell() ){
+		if(!OP()->isShell() ){
 		$cookie = Cookie::Get($form_name, []);
 		}else{
 			$cookie = [];
