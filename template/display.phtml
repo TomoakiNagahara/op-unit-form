@@ -28,7 +28,7 @@ namespace OP\UNIT\FORM;
 	</tr>
 	<tr>
 		<td></td>
-		<td><?php $form->Error($name) ?></td>
+		<td class="error padding bottom bit"><?php $form->Error($name) ?></td>
 	</tr>
 	<?php endforeach; ?>
 	<?php if( empty($form->Config()['input']['button']) ): ?>
