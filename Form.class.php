@@ -800,9 +800,6 @@ class Form implements IF_FORM, IF_UNIT
 		}
 
 		//	...
-		$format = $config['error'] ?? $format;
-
-		//	...
 		foreach(($this->_errors[$name] ?? [] ) as $rule => $var ){
 			//	...
 			if( $var === false ){
