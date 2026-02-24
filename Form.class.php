@@ -383,7 +383,7 @@ class Form implements IF_FORM, IF_UNIT
 			$option['label'] = $label;
 			$option['value'] = $value;
 			$option['check'] = $check;
-			if( $disabled ){
+			if( $disabled ?? null ){
 				$option['disabled'] = true;
 			}
 		}
