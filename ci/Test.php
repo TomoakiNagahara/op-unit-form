@@ -56,4 +56,10 @@ $args   = [];
 $ci->Set($method, $result, $args);
 
 //	...
+$method = 'Form';
+$result =  null;
+$args   =  null;
+$ci->Set($method, $result, $args);
+
+//	...
 return $ci->Get();
