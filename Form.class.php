@@ -595,7 +595,7 @@ class Form implements IF_FORM, IF_UNIT
 					return \OP\UNIT\FORM\Input::Build($input);
 			}
 		} catch ( \Throwable $e ) {
-			Notice::Set($e);
+			OP()->Notice($e);
 		}
 	}
 
