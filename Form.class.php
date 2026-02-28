@@ -438,7 +438,7 @@ class Form implements IF_FORM, IF_UNIT
 		//	...
 		if(!isset($this->_is_token) ){
 			//	For developers message.
-			if(!isset($this->_session['token']) and OP()->Env()->isAdmin() ){
+			if(!isset($this->_session['token']) and OP()->isAdmin() ){
 				//	CI
 				if(!OP()->Env()->isCI() ){
 					D("Session has expired.");
@@ -454,7 +454,7 @@ class Form implements IF_FORM, IF_UNIT
 			//	Regenerate new token.
 		//	$this->_session['token'] = Hasha1(microtime());
 		//	$this->_session['token'] = random_int(1000, 9999);
-			$this->_session['token'] = Env::isCI() ? 'CI': random_int(10000, 99999);
+			$this->_session['token'] = OP()->isCI() ? 'CI': random_int(10000, 99999);
 
 			//	Confirmation of request token.
 			if( $token ){
@@ -462,7 +462,7 @@ class Form implements IF_FORM, IF_UNIT
 			};
 
 			//	For developers.
-			if( Env::isAdmin() ){
+			if( OP()->isAdmin() ){
 				/*
 				//	...
 				$token_session = $token;
