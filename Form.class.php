@@ -488,7 +488,7 @@ class Form implements IF_FORM, IF_UNIT
 	{
 		//	...
 		if( $this->_is_start ){
-			Notice::Set("Form has already started. ({$this->_form['name']})");
+			OP()->Notice("Form has already started. ({$this->_form['name']})");
 		}else{
 			$this->_is_start = true;
 		}
