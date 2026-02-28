@@ -863,7 +863,7 @@ class Form implements IF_FORM, IF_UNIT
 	{
 		//	...
 		if( empty($this->_form['input'][$input_name]) ){
-			Notice::Set("Has not been set this input. ($input_name)");
+			OP()->Notice("Has not been set this input. ($input_name)");
 			return;
 		}
 
