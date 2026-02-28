@@ -958,7 +958,7 @@ class Form implements IF_FORM, IF_UNIT
 	function Test()
 	{
 		//	...
-		if(!Env::isAdmin() ){
+		if(!OP()->isAdmin() ){
 			return false;
 		}
 
