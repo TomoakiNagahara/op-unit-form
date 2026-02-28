@@ -406,7 +406,7 @@ class Form implements IF_FORM, IF_UNIT
 				$this->_InitInput();
 
 				//	...
-				if( Env::isAdmin() ){
+				if( OP()->isAdmin() ){
 					if(!FORM\Test::Config($this->_form) ){
 						foreach( FORM\Test::Error() as $error ){
 							D($error);
@@ -414,7 +414,7 @@ class Form implements IF_FORM, IF_UNIT
 					}
 				}
 			} catch ( \Throwable $e ){
-				Notice::Set($e);
+				OP()->Notice($e);
 			}
 		}
 
