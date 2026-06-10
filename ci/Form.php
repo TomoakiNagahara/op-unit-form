@@ -202,14 +202,14 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = 'GetLabel';
-$result =  null;
-$args   =  null;
+$args   = 'ci_test';
+$result = 'CI text';
 $ci->Set($method, $result, $args);
 
 //	...
 $method = 'GetValue';
-$result =  null;
-$args   =  null;
+$args   = 'ci_test';
+$result = 'value is update';
 $ci->Set($method, $result, $args);
 
 //	...
